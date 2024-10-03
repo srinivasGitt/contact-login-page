@@ -1,0 +1,524 @@
+:root {
+    --Brand-orange: #FF5F2D; /* Define the brand orange globally */
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(309deg, #AD00FF -16.09%, #8200DD 0.11%, #130085 74.42%);
+    align-items: center;
+    min-height: 78vh; /* Minimum height to cover most of the viewport */
+    /* width: 100vw;  */
+    overflow-x: hidden; /* Hide any horizontal overflow */
+    margin: 0; /* No margin to prevent overflow */
+    padding: 0; /* No padding to prevent overflow */
+    margin-top: -5px;
+}
+
+.common-contact {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px; /* Add gap for spacing between columns */
+    margin: 40px;
+}
+
+.contact-left {
+    color: white;
+    width: 45vw;
+}
+
+.contact-left h2 {
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+.contact-left .highlight {
+    color: #FF5F2D;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.contact-info{
+    width: 60%;
+}
+
+.contact-info p {
+    display: flex; /* Aligns icon and text horizontally */
+    align-items: center; /* Vertically centers the icon and text */
+    gap: 10px; /* Adds space between the icon and text */
+    margin: 50px 0;
+    color: var(--White, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Nunito;
+    font-size: 22.857px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.857px; /* 100% */
+    flex-wrap: wrap; /* Allows wrapping of content */
+    overflow: hidden; /* Ensures overflow text is hidden */
+    white-space: normal; /* Allows normal wrapping of text */
+    word-break: break-all;
+}
+
+.contact-info .icon {
+    display: flex; /* Ensures proper alignment of SVG */
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.social-links a {
+    font-size: 24px;
+    color: white;
+}
+
+
+.contact-right {
+    display: flex;
+    width: 600px; /* Maximum width to limit the form size */
+    padding: 20px; /* Reduced padding to avoid overflow */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Adjusted gap */
+    border-radius: 22.857px;
+    background: #FFFEFE;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Prevents overflow */
+}
+
+.contact-form h3 {
+    color: var(--Brand-orange, #FF5F2D);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Nunito;
+    font-size: 19.048px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.857px; /* 120% */
+}
+
+.interests {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    margin-bottom: 20px;
+}
+
+.interests button {
+    padding: 10px 15px; /* Default padding for buttons */
+    background-color: #f9f9f9; /* Default background */
+    border-radius: 47.619px;
+    border: 0.952px solid #787878;
+    cursor: pointer;
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    display: flex;
+    color: #787878;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Nunito;
+    font-size: 15.238px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.857px; /* 150% */
+}
+
+/* Last button in interests */
+.interests button:last-child {
+    margin-right: 0; /* Remove right margin from last button */
+}
+
+/* Styles for selected button */
+.interests button.selected {
+    background: var(--Brand-orange, #FF5F2D); /* Background color for selected button */
+    color: white; /* Change text color for better contrast */
+    border: none; /* Remove the default border */
+}
+
+.sales-button{
+    display: flex;
+    padding: 9.524px 19.048px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 47.619px;
+    width: vw;
+}
+
+.get-demo-button {
+    /* Custom styles for the Get Demo button */
+    padding: 12px 24px;
+    font-size: 14px;
+    background-color: #f9f9f9; /* Different background color */
+}
+
+.user-support-button {
+    /* Custom styles for the User Support button */
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #e0e0e0;
+}
+
+.vendor-support-button {
+    /* Custom styles for the Vendor Support button */
+    padding: 12px 18px;
+    font-size: 15px;
+    background-color: #d0d0d0;
+}
+
+.other-button {
+    /* Custom styles for the Other button */
+    padding: 10px 10px;
+    font-size: 14px;
+    background-color: #cccccc;
+}
+
+/* Add styles for selected state if needed */
+.selected {
+    background-color: var(--Brand-orange, #FF5F2D); /* Highlight color */
+    color: white; /* Change text color if needed */
+    color: var(--White, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Nunito;
+    font-size: 15.238px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.857px; /* 150% */
+}
+
+
+.pair input{
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 50px; /* Set a minimum width for inputs */
+    width: 160px;
+    padding: auto;
+}
+
+.pair {
+    display: flex;
+    gap: 20px; /* Space between the two inputs */
+    flex-wrap: wrap; /* Allow inputs to wrap on smaller screens */
+    margin-bottom: 25px;
+}
+
+.labelled , .textarea{
+    display: flex;
+    flex-direction: column; /* Stack label on top of input */
+    flex: 1; /* Ensure both fields take equal space */
+    color: #CDCDCD;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Nunito;
+    font-size: 15.238px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15.238px; /* 100% */
+}
+
+
+
+.pair input, 
+.form-group textarea {
+    padding: 12px;
+    border: none; /* Remove all borders */
+    border-bottom: 1.905px solid #CDCDCD; /* Initial bottom border */
+    border-radius: 0; /* Remove border radius */
+    width: 100%; /* Ensure inputs take full width of parent */
+    box-sizing: border-box; /* Include padding and border in width */
+    color: #787878;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Nunito;
+    font-size: 15.238px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.857px; /* 150% */
+}
+
+.pair input::placeholder, 
+.form-group textarea::placeholder  {
+    color: #CDCDCD;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Nunito;
+    font-size: 15.238px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.857px; /* 150% */
+}
+
+.pair input:focus{
+    outline: none; /* Remove focus outline */
+    border-bottom: 1.905px solid var(--Brand-orange, #FF5F2D); /* Change color when focused */
+}
+
+.labelled:focus-within label{
+    color: var(--Brand-orange, #FF5F2D);
+}
+
+.textarea textarea:focus{
+    outline: none;
+    border: 1.905px solid var(--Brand-orange, #FF5F2D);
+}
+
+.textarea:focus-within label{
+    color: var(--Brand-orange, #FF5F2D);
+}
+
+
+
+
+
+/* Responsive Styling for smaller screens */
+@media (max-width: 768px) {
+    .pair {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .labelled {
+        width: 100%; /* Full width on small screens */
+    }
+}
+.labelled{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 50px; /* Set a minimum width for inputs */
+    width: 160px;
+
+}
+
+
+.contact-form textarea {
+    width: 100%; /* Full width for the textarea */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 120px; /* Set height for textarea */
+    resize: none; /* Prevent resizing */
+    border-radius: 11.429px;
+    border: 1.905px solid #CDCDCD;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.submit-btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Full width for submit button */
+    padding: 12px; /* Added padding */
+    box-sizing: border-box; /* Include padding and border in width */
+    border-radius: 47.619px;
+    background: var(--Brand-orange, #FF5F2D);
+    margin-top: 30px;
+}
+
+
+
+/* Responsive section */
+@media (max-width: 768px) {
+    .common-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-group {
+        flex-direction: column;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+    
+    .locations {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .location-item {
+        /* width: 90%; */
+    }
+
+    .contact-right {
+        width: 90vw; /* Wider width on smaller screens */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .interests button {
+        flex: 1; /* Allow buttons to take full width */
+        margin-right: 5px; /* Smaller space between buttons */
+    }
+
+    .form-group input {
+        min-width: auto; /* Remove minimum width */
+        margin-bottom: 10px; /* Margin for spacing between inputs */
+    }
+}
+
+.locations-section {
+    /* padding: 50px 0; */
+    text-align: center;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.locations-section h3 {
+    color: #FF5F2D;
+    font-family: Inter;
+    font-size: 18.702px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.location h1{
+    color: #2C2C2C;
+    font-family: Poppins;
+    font-size: 44.885px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.locations {
+    display: flex;
+    justify-content: center;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.location-item {
+}
+
+.location-item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.location-item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+/* Media Queries */
+
+/* For screens 700px and above */
+@media (max-width: 700px) {
+    .common-contact{
+        /* margin: 0; */
+        margin-right: 30px;
+    }
+    .contact-left h2 {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .contact-left .highlight {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .contact-info p {
+        font-size: 18px; /* Smaller font size */
+        flex-direction: column; /* Stacks icon and text */
+        align-items: flex-start; /* Aligns items to the left */
+    }
+
+    .contact-form h3 {
+        font-size: 16px; /* Smaller font size for heading */
+    }
+
+    .submit-btn {
+        padding: 10px; /* Smaller padding */
+    }
+}
+
+/* For screens 400px and above */
+@media (max-width: 400px) {
+    .contact-left h2 {
+        font-size: 28px; /* Even smaller font size */
+    }
+
+    .contact-left .highlight {
+        font-size: 28px; /* Even smaller font size */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* Smaller font size */
+        flex-direction: column; /* Stacks icon and text */
+        align-items: flex-start; /* Aligns items to the left */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* Smaller font size */
+        justify-content: flex-start; /* Aligns items to the left */
+    }
+
+    .social-links {
+        flex-direction: column; /* Stack social icons vertically */
+        align-items: flex-start; /* Aligns items to the left */
+    }
+
+    .social-links a {
+        font-size: 20px; /* Smaller font size for icons */
+    }
+
+    .social-links svg {
+        width: 18px; /* Smaller size for SVGs */
+        height: 18px; /* Smaller size for SVGs */
+    }
+
+    .icon svg {
+        width: 18px; /* Smaller size for SVGs */
+        height: 18px; /* Smaller size for SVGs */
+    }
+}
+
+@media (max-width: 260px){
+    .contact-left h2 {
+        font-size: 18px; /* Even smaller font size */
+    }
+
+    .contact-left .highlight {
+        font-size: 18px; /* Even smaller font size */
+    }
+
+    .contact-form h3 {
+        font-size: 16px; /* Smaller font size for heading */
+    }
+
+    .submit-btn {
+        padding: 10px; /* Smaller padding */
+    }
+    
+}

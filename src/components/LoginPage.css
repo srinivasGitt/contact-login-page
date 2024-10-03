@@ -1,0 +1,160 @@
+/* Login.css */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #EEE;
+    padding: 54px 0 38px 0;   /* Space above and below */
+}
+
+.whole-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #E9EBF8;
+}
+
+.left-panel {
+    width: 100%;            
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #E9EBF8;
+    background: linear-gradient(229deg, #9F03B9 5.73%, #6E00C4 91.32%);
+    /* padding: 20px; */
+}
+
+.right-panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100%;                /* Make card take full width of the parent */
+    max-width: 400px;           /* Limit the maximum width for larger screens */
+    margin: 0 auto;             /* Center the card horizontally */
+    padding: 10px;              /* Add some padding */
+    box-sizing: border-box;     /* Ensure padding is included in width */
+}
+
+.card img {
+    width: 100%;                /* Make the image take the full width of the card */
+    height: auto;               /* Maintain aspect ratio */
+    border-radius: 8px;         /* Add rounded corners if desired */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.login-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #F5F5F5;
+}
+.login-form label{
+    color: #2C2C2C;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 3px;
+    margin-top: 20px;
+}
+
+.error{
+    color: red;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Spacing between inputs */
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 10px; /* Adjust as needed */
+    pointer-events: none; /* Allows clicking on the input without obstruction */
+  }
+  
+  .input-field {
+    padding-left: 30px; /* Space for the SVG icon */
+    width: 100%;
+    height: 40px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+
+.login-form button {
+    border-radius: 8px;
+    background: var(--Brand-Light-purple, #6500FF);
+    color: white;
+    padding: 10px;
+    border: none;
+    height: 48px;
+}
+
+.sign-in {
+    color: #8E98A8;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 13px;
+}
+
+.terms {
+    color: #8E98A8;
+text-align: center;
+font-family: Poppins;
+font-size: 13.483px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+}
+
+.link {
+    text-decoration: none;
+    margin-left: 5px;
+    color: #4280EF;
+    text-decoration-line: underline;
+}
+
+.quote {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    .whole-panel {
+        flex-direction: row;
+        max-width: 1000px;
+        height: auto;   /* Adjust height based on content */
+    }
+}

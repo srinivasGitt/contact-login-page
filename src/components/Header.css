@@ -1,0 +1,270 @@
+/* Header.css */
+.header {
+    display: flex;
+    /* width: 100vw; */
+    min-height: 172.698px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  display: flex;
+    width: 95vw;
+    height: 86.402px;
+    align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    /* border-bottom: 1.2px solid #DFDFE0; */
+    justify-content: space-evenly;
+}
+
+.header-bottom{
+    display: flex;
+    align-items: center;
+    width: 95vw;
+    min-height: 86.402px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-shrink: 0;
+    /* border-top: 1.2px solid #DFDFE0; */
+}
+
+.seperator{
+width: 100%;
+background: #DFDFE0;
+border-top: 1.2px solid #DFDFE0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-bar {
+    width: 759.613px; /* Full width of the parent */
+    position: relative; /* Position relative for the input */
+}
+
+.search-bar input {
+    width: 100%; /* Full width of the input */
+    padding: 8px 40px 8px 40px; /* Padding to make space for the icon */
+    border: 1px solid #ddd; /* Input border */
+    border-radius: 36px; /* Rounded corners */
+    background: #F0F1F2; /* Background color */
+    box-sizing: border-box; /* Include padding in width/height */
+    height: 3.5vw; /* Responsive height */
+    margin-left: 20px; /* Space on the left */
+}
+
+.search-bar input::placeholder {
+    color: #9A9EA6; /* Placeholder color */
+}
+
+/* Background SVG as data URL */
+.search-bar input {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M9.60376 17.4009C13.8012 17.4009 17.2039 13.9982 17.2039 9.80079C17.2039 5.60335 13.8012 2.20065 9.60376 2.20065C5.40633 2.20065 2.00363 5.60335 2.00363 9.80079C2.00363 13.9982 5.40633 17.4009 9.60376 17.4009Z" stroke="%239A9EA6" stroke-width="1.20002" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.0039 18.2009L16.4039 16.6009" stroke="%239A9EA6" stroke-width="1.20002" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: 10px center; /* Position the icon */
+    background-size: 20px 20px; /* Size of the icon */
+}
+
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.contact-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14.4px;
+
+}
+
+.support-button{
+    display: flex;
+    width: 57.601px;
+    height: 4vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36.001px;
+    background: #FFF4F0;
+}
+
+.contact-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4px;
+}
+
+.text1 {
+    color: #9A9EA6; 
+    font-size: 12px; 
+    font-family: Poppins; 
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.text2{
+    color: #FF5F2D;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+.user-profile{
+    display: flex;
+}
+
+.user-profile img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+
+.nav-links {
+  display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 41.866px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--Light-Text, #9A9EA6);
+    font-family: Poppins;
+    font-size: 14.653px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.common-links{
+    display: flex;
+    width: 270.037px;
+    align-items: flex-start;
+    gap: 70.866px;
+    margin-left: auto;
+}
+
+.common-links a{
+    text-decoration: none;
+    color: #4700B9;
+    font-family: Inter;
+    font-size: 14.653px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.register-btn {
+    display: flex;
+    height: 3.5vw;
+    padding: 0px 45.601px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36.001px;
+    background: #FF5F2D;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: auto;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* .header-left, .header-bottom {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px;
+    } */
+
+    .header-left{
+        gap: 20px;
+        min-height: 172.698px;
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        width: 90%; 
+        margin: 0; 
+    }
+
+    .nav-links {
+        display: flex; /* Hide nav links by default */
+        flex-direction: column;
+        top: 50px; /* Adjust as needed */
+        left: 0;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+
+    .text1{
+        font-size: 8px;
+    }
+
+    .text2{
+        font-size: 10px;
+    }
+
+    .common-links{
+        margin: 0;
+        margin-left: auto;
+    }
+
+    .common-links a{
+        font-size: 14px;
+    }
+
+    .register-btn{
+        width: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-left, .header-bottom {
+        width: 100%; /* Full width */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text1, .text2 {
+        font-size: 6px; /* Adjust font size for smaller screens */
+    }
+
+    .register-btn{
+        font-size: 5px;
+    }
+
+    .search-bar {
+        width: 50%; /* Full width on smaller screens */
+        margin: 0; /* Remove side margins */
+    }
+
+    .search-bar input{
+        margin-left: 0px;
+    }
+}
