@@ -79,6 +79,29 @@
     line-height: normal;
 }
 
+.email-group {
+    position: relative;
+}
+
+.email-input-container {
+    position: relative;
+    /* width: 100%; */
+}
+
+.email-input-container input {
+    width: 89%;
+    padding-right: 30px; /* Add padding to avoid text overlapping with tick */
+}
+
+@media(max-width: 368px){
+    .email-input-container input{
+        width: 80%;
+    }
+}
+
+
+
+
 .login-form input::placeholder{
     color: #2C2C2C;
     font-family: "Plus Jakarta Sans";
@@ -174,4 +197,10 @@ line-height: normal;
         max-width: 1000px;
         height: auto;   /* Adjust height based on content */
     }
+
+    .login-form{
+        width: 80%;
+    }
+
 }
+

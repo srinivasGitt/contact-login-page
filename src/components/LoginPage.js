@@ -4,23 +4,31 @@ import Layout from './Layout';
 import './LoginPage.css'; // CSS styles for login page
 import card from '../assets/images/card3.svg';
 import { useNavigate } from 'react-router-dom';
-
+import eye from '../assets/icons/eye.svg'
+import NotVision from '../assets/icons/NotVision.svg'
+import tick from '../assets/icons/tick.svg'
 
 const Login = () => {
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [errors, setErrors] = useState({});
+    const [isEmailValid, setIsEmailValid] = useState(false); // State for email validation
+    const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
     const navigate = useNavigate();
+
+    const validateEmail = (email) => {
+        const emailPattern = /\S+@\S+\.\S+/;
+        return emailPattern.test(email);
+    };
 
     const validateForm = () => {
         const newErrors = {};
 
         if (!email) {
             newErrors.email = 'Email is required';
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
+        } else if (!validateEmail(email)) {
             newErrors.email = 'Email is invalid';
         }
 
@@ -41,6 +49,12 @@ const Login = () => {
         return newErrors;
     };
 
+    const handleEmailChange = (e) => {
+        const emailInput = e.target.value;
+        setEmail(emailInput);
+        setIsEmailValid(validateEmail(emailInput)); // Check email validity
+    };
+
     const handleCreateAccount = (e) => {
         e.preventDefault(); // Prevent default form submission
         const validationErrors = validateForm();
@@ -50,6 +64,10 @@ const Login = () => {
         if (Object.keys(validationErrors).length === 0) {
             navigate('/contact');
         }
+    };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword((prevShowPassword) => !prevShowPassword); // Toggle password visibility
     };
 
 
@@ -132,43 +150,73 @@ const Login = () => {
                     <div className="right-panel">
                         <form className="login-form">
                             <label htmlFor="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="Email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
+                            <div className="email-input-container">
+                                <input
+                                    type="email"
+                                    id="email"
+                                    value={email}
+                                    onChange={handleEmailChange}
+                                />
+                                {isEmailValid && <img src={tick}
+                                    className="toggle-password-icon"
+                                    style={{
+                                        position: 'absolute',
+                                        right: '-6px',
+                                        top: '50%',
+                                        transform: 'translateY(-50%)',
+                                        cursor: 'pointer'
+                                    }}
+                                />} {/* Tick mark */}
+                            </div>
                             {errors.email && <span className="error">{errors.email}</span>}
 
                             <label htmlFor="password">Password</label>
-                            <input
-                                type="password"
-                                id="password"
-                                placeholder="Password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
+                            <div className='email-input-container'>
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    id="password"
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                                <img
+                                    src={showPassword ? NotVision : eye}
+                                    alt={showPassword ? "Hide Password" : "Show Password"}
+                                    onClick={togglePasswordVisibility}
+                                    className="toggle-password-icon"
+                                    style={{
+                                        position: 'absolute',
+                                        right: '10px',
+                                        top: '50%',
+                                        transform: 'translateY(-50%)',
+                                        cursor: 'pointer'
+                                    }}
+                                />
+                            </div>
                             {errors.password && <span className="error">{errors.password}</span>}
 
                             <label htmlFor="firstName">First Name</label>
-                            <input
-                                type="text"
-                                id="firstName"
-                                placeholder="First Name"
-                                value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}
-                            />
+                            <div className='email-input-container'>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    placeholder="First Name"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                />
+                            </div>
                             {errors.firstName && <span className="error">{errors.firstName}</span>}
 
                             <label htmlFor="lastName">Last Name</label>
-                            <input
-                                type="text"
-                                id="lastName"
-                                placeholder="Last Name"
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}
-                            />
+                            <div className='email-input-container'>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    placeholder="Last Name"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
+                                />
+                            </div>
                             {errors.lastName && <span className="error">{errors.lastName}</span>}
 
                             <p className="terms">
