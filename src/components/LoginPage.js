@@ -72,7 +72,7 @@ const Login = () => {
 
 
     return (
-        <Layout>
+        <>
             <div className="login-page">
                 <div className='whole-panel'>
                     <div className="left-panel">
@@ -154,6 +154,7 @@ const Login = () => {
                                 <input
                                     type="email"
                                     id="email"
+                                    placeholder="Email"
                                     value={email}
                                     onChange={handleEmailChange}
                                 />
@@ -232,7 +233,7 @@ const Login = () => {
                 </div>
 
             </div>
-        </Layout>
+        </>
     );
 };
 

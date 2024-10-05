@@ -86,7 +86,7 @@ const Contact = () => {
     }
 
     return (
-        <Layout>
+        <>
             <div className="contact-page">
                 <div className="common-contact">
                     <div className="contact-left">
@@ -294,7 +294,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     );
 };
 
