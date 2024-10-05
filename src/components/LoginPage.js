@@ -154,6 +154,7 @@ const Login = () => {
                                 <input
                                     type="email"
                                     id="email"
+                                    placeholder="Email"
                                     value={email}
                                     onChange={handleEmailChange}
                                 />
