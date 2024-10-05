@@ -72,7 +72,7 @@ const Login = () => {
 
 
     return (
-        <Layout>
+        <>
             <div className="login-page">
                 <div className='whole-panel'>
                     <div className="left-panel">
@@ -232,7 +232,7 @@ const Login = () => {
                 </div>
 
             </div>
-        </Layout>
+        </>
     );
 };
 

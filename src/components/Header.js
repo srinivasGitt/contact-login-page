@@ -1,6 +1,7 @@
 // Header.js
 import React, { useState } from 'react';
 import './Header.css'; // Assuming we're using CSS for styles
+import { Link } from 'react-router-dom';
 const Header = ({ showRegister }) => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -54,12 +55,11 @@ const Header = ({ showRegister }) => {
                 </svg>
                 <div>
                     <nav className="nav-links">
-
-                        <a href="#">All Categories</a>
-                        <a href="#">Blog</a>
-                        <a href="/contact">Contact us</a>
-                        <a href="#">About us</a>
-                        <a href="#">More</a>
+                        <Link >All Categories</Link>
+                        <Link >Blog</Link>
+                        <Link to='/contact'>Contact us</Link>
+                        <Link >About us</Link>
+                        <Link >More</Link>
 
                     </nav>
                 </div>
@@ -69,7 +69,7 @@ const Header = ({ showRegister }) => {
                 </div>
             </div>
 
-        </header>
+        </header >
     );
 };
 
