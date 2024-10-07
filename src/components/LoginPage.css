@@ -6,6 +6,7 @@
     align-items: center;
     background: #EEE;
     padding: 54px 0 38px 0;   /* Space above and below */
+    min-height: calc(100vh - 173.8px);
 }
 
 .whole-panel {
